@@ -1,0 +1,2 @@
+This project is a mockup to show how to integrate Myrtille into an existing website with iframe(s) and administrate the remote sessions with REST APIs
+In order to run this project under Visual Studio, you will need to enable *"cookieless=UseUri"* session state into Myrtille web.config

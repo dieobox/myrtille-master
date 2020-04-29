@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{010E1702-3045-4B13-BFB6-06FFC60B5CBB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Myrtille.Services.Contracts</RootNamespace>
+    <AssemblyName>Myrtille.Services.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\IEnterpriseAdapter.cs" />
+    <Compile Include="Adapters\IMultifactorAuthenticationAdapter.cs" />
+    <Compile Include="Enums\CaptureFormat.cs" />
+    <Compile Include="Enums\EnterpriseMode.cs" />
+    <Compile Include="Enums\HostType.cs" />
+    <Compile Include="Enums\RemoteSessionExitCode.cs" />
+    <Compile Include="Enums\RemoteSessionState.cs" />
+    <Compile Include="Enums\SecurityProtocol.cs" />
+    <Compile Include="ICaptureService.cs" />
+    <Compile Include="IDisconnectionService.cs" />
+    <Compile Include="IConnectionService.cs" />
+    <Compile Include="IEnterpriseService.cs" />
+    <Compile Include="IFileStorage.cs" />
+    <Compile Include="IMFAAuthentication.cs" />
+    <Compile Include="IApplicationPoolService.cs" />
+    <Compile Include="IPrinterService.cs" />
+    <Compile Include="IRemoteSessionProcess.cs" />
+    <Compile Include="ISharingService.cs" />
+    <Compile Include="Models\Connection.cs" />
+    <Compile Include="Models\ConnectionInfo.cs" />
+    <Compile Include="Models\EnterpriseAuthenticationErrorHelper.cs" />
+    <Compile Include="Models\EnterpriseConnectionDetails.cs" />
+    <Compile Include="Models\EnterpriseHost.cs" />
+    <Compile Include="Models\EnterpriseHostEdit.cs" />
+    <Compile Include="Models\EnterpriseHostSessionCredentials.cs" />
+    <Compile Include="Models\EnterpriseSession.cs" />
+    <Compile Include="Models\GuestInfo.cs" />
+    <Compile Include="Models\HostInfo.cs" />
+    <Compile Include="Models\UserInfo.cs" />
+    <Compile Include="Models\VMInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Enums\RemoteSessionCommand.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
