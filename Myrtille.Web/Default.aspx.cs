@@ -225,24 +225,7 @@ namespace Myrtille.Web
 
                     if (RemoteSession.State == RemoteSessionState.Disconnected)
                     {
-                        // if connecting from a login page or url, show any connection failure into a dialog box
-                        // otherwise, this is delegated to the connection API used and its related UI
-                        //if (_loginEnabled)
-                        //{
-                        //    // handle connection failure
-                        //    var script = string.Format("handleRemoteSessionExit({0});", RemoteSession.ExitCode);
-
-                        //    // redirect to login page
-                        //    if (!string.IsNullOrEmpty(_loginUrl))
-                        //    {
-                        //        //script += string.Format("window.location.href = '{0}';", _loginUrl);
-                        //       // script += "window.close();";
-                        //    }
-                        //    script += "window.close();";
-                        //    ClientScript.RegisterClientScriptBlock(GetType(), Guid.NewGuid().ToString(), script, true);
-                        //}
-                        // handle connection failure
-                        // var script = string.Format("handleRemoteSessionExit({0});", RemoteSession.ExitCode);
+                        
                         try
                         {
                             string url = "https://console.kodeendpoint.com/ComputerManagement/CloseRemote/?ServerAddress=" + RemoteSession.ServerAddress;
