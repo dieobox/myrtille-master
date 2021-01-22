@@ -3,7 +3,10 @@
   <Profiles />
   <Settings>
     <Setting Name="ConnectionServiceUrl" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://localhost:8008/Myrtille/ConnectionService/</Value>
+      <Value Profile="(Default)">http://localhost:8008/MyrtilleAdmin/ConnectionService/</Value>
+    </Setting>
+    <Setting Name="ServerURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://demo.kodeendpoint.com</Value>
     </Setting>
   </Settings>
 </SettingsFile>

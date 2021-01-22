@@ -43,7 +43,7 @@ namespace Myrtille.Web
         private MFAAuthenticationClient _mfaAuthClient =  new MFAAuthenticationClient();
         private EnterpriseClient _enterpriseClient = new EnterpriseClient();
         private ConnectionClient _connectionClient = new ConnectionClient(Settings.Default.ConnectionServiceUrl);
-
+        private string serverurl  = Settings.Default.ServerURL;
         private bool _allowRemoteClipboard;
         private bool _allowFileTransfer;
         private bool _allowPrintDownload;
@@ -228,7 +228,7 @@ namespace Myrtille.Web
                         
                         try
                         {
-                            string url = "https://console.kodeendpoint.com/ComputerManagement/CloseRemote/?ServerAddress=" + RemoteSession.ServerAddress;
+                            string url = serverurl+"/ComputerManagement/CloseRemote/?ServerAddress=" + RemoteSession.ServerAddress;
                             var script = string.Format("window.location.href = '{0}';", url);
                             ClientScript.RegisterClientScriptBlock(GetType(), Guid.NewGuid().ToString(), script, true);
                         }
